@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+        <script src='script.js' type="text/javascript"></script>
+
+        <link rel="stylesheet" type="text/css" media="screen" href="browser-detection.css" />
+        <script type="text/javascript" src="browser-detection.js"></script>
+
+        <title>Calculator</title>
+    </head>
+
+    <body>
+        <a href="https://github.com/joahg/HTML-Calculator"><img style="position: absolute; top: 0; left: 0; border: 0; z-index:100;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub"></a>
+
+        <div id="container">
+            <div id="slide2"> <a href="javascript:void(0)" id="log" class="slide"> Lg<sub>x</sub></a>
+                <a href="javascript:void(0)" id="ln" class="slide"> Ln </a>
+                <a href="javascript:void(0)" id="Mp" class="slide"> M+ </a>
+                <a href="javascript:void(0)" id="Mm" class="slide"> M- </a>
+                <a href="javascript:void(0)" id="MR" class="slide"> MR </a>
+                <a href="javascript:void(0)" id="MC" class="slide"> MC </a>
+            </div>
+            <div id="calculator">
+                <div id="total"></div>
+                <div id="operators"> <a href="javascript:void(0)" id="plus" class="operator"> + </a>
+                    <a href="javascript:void(0)" id="minus" class="operator"> - </a>
+                    <a href="javascript:void(0)" id="times" class="operator"> x </a>
+                    <a href="javascript:void(0)" id="divide" class="operator"> / </a>
+                </div>
+                <div id="side">
+                    <a href="javascript:void(0)" id="sq" class="side"> ^ </a>
+                    <a href="javascript:void(0)" id="sqrt" class="side"> &radic; </a>
+                    <a href="javascript:void(0)" id="decimal" class="side"> . </a>
+                    <a href="javascript:void(0)" id="equals" class="side"> = </a>
+                    <a href="javascript:void(0)" id="slideout" class="side"> &#62; </a>
+                    <a href="javascript:void(0)" id="slidein" class="side" style="display:none;"> &#60; </a>
+
+                </div>
+                <div id="numbers">
+                    <a href="javascript:void(0)" id="one" class="number"> 1 </a>
+                    <a href="javascript:void(0)" id="two" class="number"> 2 </a>
+                    <a href="javascript:void(0)" id="three" class="number"> 3 </a>
+                    <a href="javascript:void(0)" id="four" class="number"> 4 </a>
+                    <a href="javascript:void(0)" id="five" class="number"> 5 </a>
+                    <a href="javascript:void(0)" id="six" class="number"> 6 </a>
+                    <a href="javascript:void(0)" id="seven" class="number"> 7 </a>
+                    <a href="javascript:void(0)" id="eight" class="number"> 8 </a>
+                    <a href="javascript:void(0)" id="nine" class="number"> 9 </a>
+                    <a href="javascript:void(0)" id="slideout2" class="number"> &#60; </a>
+                    <a href="javascript:void(0)" id="slidein2" class="number" style="display:none"> &#62; </a>
+                    <a href="javascript:void(0)" id="zero" class="number"> 0 </a>
+                    <a href="javascript:void(0)" id="clearall" class="number"> AC </a>
+                </div>
+            </div>
+            <div id="slide">
+                <a href="javascript:void(0)" id="sinr" class="slide"> S(r) </a>
+                <a href="javascript:void(0)" id="sind" class="slide"> S(d) </a>
+                <a href="javascript:void(0)" id="cosr" class="slide"> C(r) </a>
+                <a href="javascript:void(0)" id="cosd" class="slide"> C(d) </a>
+                <a href="javascript:void(0)" id="tanr" class="slide"> T(r) </a>
+                <a href="javascript:void(0)" id="tand" class="slide"> T(d) </a>
+            </div>
+            <div id="note" style="display:none;"><em>Note: The backspace feature is not currently available to Chrome users</em>
+            </div>
+        </div>
+    </body>
+
+</html>

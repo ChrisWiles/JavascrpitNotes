@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Mortgage Calculator</title>
+        <h1>Mortgage calculator</h1>
+    </head>
+    <body>
+        <p><b>Mortgage amount</b>: <input type="text" id="inCost"/></p>
+        <p><b>Interest rate (%)</b>: <input type="text" id="inAPR"/></p>
+        <p><b>Mortgage period (years)</b>: <input type="text" id="inPeroid"/></p>
+
+        <script src="cal.js"></script>
+        <p><button onClick="button()">Calculate Payments</button></p>
+        <p><b>Monthly Payment: <span id="outMonthly"></b></p>
+          <p><b>Total Cost: <span id="outTotal"></b></p>
+    </body>
+</html>
