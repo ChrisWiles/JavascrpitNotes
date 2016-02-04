@@ -1,5 +1,5 @@
 // Easy - 01 - First Reverse.js
-// Take the str parameter being passed and return the string in reversed order. 
+// Take the str parameter being passed and return the string in reversed order.
 
 // Using chaining
 function FirstReverse(str) {
@@ -15,6 +15,16 @@ function FirstReverse(str) {
     }
     return string;
 }
+
+function reverse(str) {
+    var s = '';
+    for (var i = 0, len = str.length - 1; i <= len; i++) {
+        s += str[len - i];
+    }
+    return s;
+}
+console.log(reverse('Chris'));
+
 // Check if any letter in an input word is repeated
 function repeatedChar(string) {
     var memo = {};
@@ -30,14 +40,6 @@ function repeatedChar(string) {
 }
 console.log(repeatedChar('repeated'));
 
-function reverse(str) {
-    var s = '';
-    for (var i = 0, len = str.length - 1; i <= len; i++) {
-        s += str[len - i];
-    }
-    return s;
-}
-console.log(reverse('Chris'));
 
 
 // Easy - 02 - First Factorial.js
@@ -45,7 +47,7 @@ console.log(reverse('Chris'));
 function FirstFactorial(num) {
 
     // First we declare a for loop starting at the parameter number - 1 (var i = num - 1)
-    // We decrease i by 1 each iteration (i--) and stop when i reaches 2 (i > 1) 
+    // We decrease i by 1 each iteration (i--) and stop when i reaches 2 (i > 1)
     for (var i = num - 1; i > 1; i--) {
 
         // On each pass, we multiply the num by i
@@ -53,7 +55,7 @@ function FirstFactorial(num) {
 
     }
     // The above loop will have the effect of multiplying num by all whole integers between 2 and num-1 inclusive.
-    // For instance, if we pass 4 into our function, the loop will run twice, multiplying 4*3 (12) and then 12*2 (24). 
+    // For instance, if we pass 4 into our function, the loop will run twice, multiplying 4*3 (12) and then 12*2 (24).
 
     // Finally, we return our answer.
     return num;
@@ -89,7 +91,7 @@ function LongestWord(sen) {
     sen = sen.split(" ");
 
     // Next, we declare a for loop that iterates through each item in our new array
-    // Our if statement checks if the length of the current item is longer than our "longestLength" variable we declared earlier and sets the longestWord variable to the actual word. 
+    // Our if statement checks if the length of the current item is longer than our "longestLength" variable we declared earlier and sets the longestWord variable to the actual word.
     for (var i = 0; i < sen.length; i++) {
         if (sen[i].length > longestLength) {
             longestLength = sen[i].length;
@@ -122,7 +124,7 @@ function LetterChanges(str) {
 
     // First we do a little meta-problem solving by setting up our alpha and newAlpha strings:
     // Each character in alpha has the same index as the character coderbyte wants us to convert it to in newAlpha
-    // For instance, since we want all d's in our input string to be converted to e's, and then we want all vowels to be capitalized, 
+    // For instance, since we want all d's in our input string to be converted to e's, and then we want all vowels to be capitalized,
     // we can "cheat" a by making alpha[3] equal to "d" and newAlpha[3] equal to "E".
     var alpha = "abcdefghijklmnopqrstuvwxyz";
     var newAlpha = "bcdEfghIjklmnOpqrstUvwxyzA";
@@ -135,7 +137,7 @@ function LetterChanges(str) {
 
         // First, we use the indexOf method to check if the current character in our string is contained in alpha.
         // Note that if the string you pass into indexOf isn't found, it will return -1. Otherwise, it will return the index of the first matching character found.
-        // For instance, alpha.indexOf("c") returns 2, while alpha.indexOf("C") returns -1. 
+        // For instance, alpha.indexOf("c") returns 2, while alpha.indexOf("C") returns -1.
         if (alpha.indexOf(str[i]) !== -1) {
 
             // If we find the character in the alpha string, we declare a variable to hold the index of the character.
@@ -193,7 +195,7 @@ function SimpleAdding(num) {
     return sum;
 }
 
-// Step By Step Recursive Solution 
+// Step By Step Recursive Solution
 function SimpleAdding(num, sum) {
     // If no argument is passed for sum (Coderbyte will always only pass 1 argument into our function), we set it to 0
     sum = sum | 0;
@@ -342,7 +344,7 @@ function TimeConvert(num) {
     // Note that Math.floor returns the nearest whole integer less than or equal to the input number.
     var hours = Math.floor(num / 60);
 
-    // Next, we use the modulus operator to figure out the number of minutes (the remainder of num/60). 
+    // Next, we use the modulus operator to figure out the number of minutes (the remainder of num/60).
     // For instance, 125 % 60 would return 5.
     var minutes = num % 60;
 
@@ -359,7 +361,7 @@ function TimeConvert(num) {
 // Step By Step
 function AlphabetSoup(str) {
 
-    // Use .split to turn the string into an array... 
+    // Use .split to turn the string into an array...
     str = str.split("");
 
     // .sort to alphabatize the new array...
@@ -492,7 +494,7 @@ function ArithGeo(arr) {
     for (var i = 0; i < arr.length - 1; i++) {
         // ...the difference of each item to our arrDif array.
         arrDif.push(arr[i + 1] - arr[i]);
-        // ...the  quotient of each item to our arrQuo array. 
+        // ...the  quotient of each item to our arrQuo array.
         arrQuo.push(arr[i + 1] / arr[i]);
     }
     // Note that since this loop "looks ahead" one item during each pass, we end it 1 iteration earlier than we normally would (i < arr.length - 1 instead of i < arr.length)
@@ -626,7 +628,7 @@ function LetterCountI(str) {
 function SecondGreatLow(arr) {
 
     // Use the sort function and pass in a callback to sort from smallest to largest
-    
+
     arr = arr.sort(function(a, b) {
         return a - b;
     });
@@ -674,8 +676,8 @@ function DivisionStringified(num1, num2) {
         for (var i = result.length - 3; i > 0; i -= 3) {
 
             // At every third character we use the .splice method to insert a comma.
-            // Note that the first arguement of the .splice is where the method inserts things into the array (i), 
-            // ...the second controls how many array items are removed (0), 
+            // Note that the first arguement of the .splice is where the method inserts things into the array (i),
+            // ...the second controls how many array items are removed (0),
             // ...and the third controls what is inserted (",").
             resultArr.splice(i, 0, ",");
         }
@@ -699,7 +701,7 @@ function DivisionStringified(num1, num2) {
 
     return resultArr.join("");
 }
-//////////Format Money 
+//////////Format Money
 function formatMoney(number) {
 
     var dollars = number.toFixed(2).toString().split('');
@@ -765,7 +767,7 @@ function MeanMode(arr) {
     // and a variable to hold the sum of the items in the array (to calculate the mean),
     var sum = 0;
 
-    // Next, we loop through each item in the input array and... 
+    // Next, we loop through each item in the input array and...
     for (var i = 0; i < arr.length; i++) {
 
         // ...add each value to our sum variable
@@ -838,8 +840,8 @@ function MeanMode(arr) {
 // Step By Step
 function DashInsert(num) {
 
-    // First, we convert the input number into a string 
-    // This allows us to add the character to our answer rather than summing the two. 
+    // First, we convert the input number into a string
+    // This allows us to add the character to our answer rather than summing the two.
     num = num.toString();
     // Next, we declare and initialize a variable to hold our answer string.
     var answer = "";

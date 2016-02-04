@@ -1,5 +1,5 @@
 /* What is an Object
-An object is an unordered list of primitive data types (and sometimes reference data types) 
+An object is an unordered list of primitive data types (and sometimes reference data types)
 that is stored as a series of name-value pairs. Each item in the list is called a property (functions are called methods).
 
 Consider this simple object: */
@@ -7,7 +7,7 @@ Consider this simple object: */
 var myFirstObject = {firstName: "Richard", favoriteAuthor: "Conrad"};
 
 var myFirstObject = {
-	firstName: "Richard", 
+	firstName: "Richard",
 	favoriteAuthor: "Conrad"
 };
 
@@ -391,10 +391,10 @@ console.log(myArr + '\n');
 myArr[1](myArr[2].name + '\n');
 
 (function(name) { // IIFE
-    
+
     var greeting = 'Inside IIFE: Hello';
     console.log(greeting + ' ' + name + '\n');
-    
+
 }('Christopher')); // IIFE
 
 function greetF() {
@@ -412,7 +412,7 @@ function greetF() {
 }
 greetF();
 
-// Memorize how to write a 
+// Memorize how to write a
 // factory Function
 // both object types
 
@@ -441,11 +441,11 @@ function Person(firstName, lastName) {
 
 }
 ////////////////////////////////////
-//Two ways to access an object  
+//Two ways to access an object
 object.propertyName
 object['propertyName']
 
-//Extending Objects 
+//Extending Objects
 object.prototype.propertyName
 car.prototype.year = "2001";
 ///////////////////////////////////////////
@@ -474,4 +474,34 @@ for (var key in obj) {
     }
 }
 
+// Namespace
+// A container which lets developers bundle all functionality under a unique, application-specific name.
+// Class
+// Defines the object's characteristics. A class is a template definition of an object's properties and methods.
+// Object
+// An instance of a class.
+// Property
+// An object characteristic, such as color.
+// Method
+// An object capability, such as walk. It is a subroutine or function associated with a class.
+// Constructor
+// A method called at the moment an object is instantiated. It usually has the same name as the class containing it.
+// Inheritance
+// A class can inherit characteristics from another class.
+// Encapsulation
+// A method of bundling the data and methods that use the data.
+// Abstraction
+// The conjunction of an object's complex inheritance, methods, and properties must adequately reflect a reality model.
+// Polymorphism
+// Poly means "many" and morphism means "forms". Different classes might define the same method or property.
 
+// Identifying a prototype property
+// You can determine whether a property is on the prototype by using a function
+// such as:
+function hasPrototypeProperty(object, name) {
+  return name in object && !object.hasOwnProperty(name);
+}
+console.log(hasPrototypeProperty(book, "title")); // false
+console.log(hasPrototypeProperty(book, "hasOwnProperty")); // true
+// If the property is in an object but hasOwnProperty() returns false, then
+// the property is on the prototype.
