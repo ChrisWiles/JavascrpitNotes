@@ -1,3 +1,4 @@
+// Sum All Primes.js
 function sumPrimes(num) {
   var sum = 0;
   for (var k = 1; k <= num; k++) {
@@ -16,3 +17,5 @@ function isPrime(n) {
   }
   return n > 1;
 }
+
+sumPrimes(10);

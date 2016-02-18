@@ -5,6 +5,17 @@
 // in the same order as that provided by a for...in loop
 // (the difference being that a for-in loop enumerates properties in the prototype chain as well).
 function where(collection, source) {
+  return collection.filter(function(element, index, array) {
+    for (var i in source) {
+      if (element[i] != source[i]) {
+        return false;
+      }
+    }
+    return true;
+  });
+}
+
+function where(collection, source) {
 
   var key0 = Object.keys(source)[0];
   var value0 = source[key0];
